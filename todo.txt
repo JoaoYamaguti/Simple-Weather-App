@@ -1,0 +1,7 @@
+npm init -y
+
+npm i express
+
+npm i dot env
+
+.giignore > add .env

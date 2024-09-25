@@ -1,6 +1,8 @@
+import 'dotenv/config'
+
 const form = document.querySelector('form')
 
-const APIKey = 'bc7b49fa6628a6658564381795f49f2e'
+const APIKey = process.env.APIKey
 
 const getWeather = async (city) => {
     const latLon = await (await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${APIKey}`)).json()
